@@ -136,6 +136,7 @@ $(document).ready(function () {
 
     // });
 });
+
 function check(respuesta, solucion, clasResp) {
     console.log(respuesta + ' & ' + solucion + ' & ' + clasResp);
     if (respuesta == solucion) {
@@ -145,13 +146,96 @@ function check(respuesta, solucion, clasResp) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var hola_angular = angular.module("hola_angular", []);
 
 hola_angular.controller("controlador", function ($scope, $http) {
     var url = "json/animales.json";
     $http.get(url).success(function (response) {
         var lista = this;
-        lista = response;
+        $scope.lista = response;
         console.log(lista);
     });
 });

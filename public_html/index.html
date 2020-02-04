@@ -42,13 +42,13 @@
         <div id="zonaresultados">
             <button class="tipoSelect" id="cargarResultados">CARGAR RESULTADOS</button>
 
-            <table ng-controller="controlador as lista">
+            <table ng-controller="controlador">
                 <tr id="listaAnimales" ng-repeat="data in lista">
 
-                    <td class="ver"> <img src="">{{data.}}</td>
-                    <td class="ver"> </td>
+                    <td class="ver"> <img src="{{data.imgAnimal}}"></td>
+                    <td class="ver"> {{data.}}</td>
                 </tr>
-            </table ng-controller="controlador as lista">
+            </table>
         </div>
     </div>
 
