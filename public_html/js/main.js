@@ -62,30 +62,27 @@ $(document).ready(function () {
             }
         }
         $("#content").html(bloque);
-
+        var contadorRespuestasTotales = 0;
         $('.botonesRespuestas').on('click', function () {
             acierto = false;
             var solucion = $(this).data('solucion');
             var respuesta = $(this).data('pregutna');
             var clasResp = $(this).data('id');
-
-            // $("ul").find(`[data-slide='${current}']`)
-
-            // var numeroIndex=
-
-            //  alert (numeroIndex);
+            
+            contadorRespuestasTotales++;
 
             respuestaCheck(respuesta, solucion);
             if (acierto != false) {
                 $(this).addClass("acierto");
-                countAcierto++;
 
-                bloqueAciertos += 'Has acertado ' + countAcierto + ' de ' + countNumeracio;
-                $("#totalAciertos").html(bloqueAciertos);
-              
-                // $('.numeracion').data('"clasResp"').addClass("acierto");
+                countAcierto++;
+                if (contadorRespuestasTotales >= 5) {
+                    bloqueAciertos += 'Has acertado ' + countAcierto + ' de ' + countNumeracio;
+                    $("#totalAciertos").html(bloqueAciertos);
+                }
+
                 $("#barraCirculos").find("[data-" + clasResp + "=" + clasResp + "]").addClass("acierto");
-                
+
             } else {
                 $(this).addClass("error");
                 $("#barraCirculos").find("[data-" + clasResp + "=" + clasResp + "]").addClass("error");
