@@ -15,12 +15,10 @@
 </head>
 
 <body>
-    {{2+2}}
     <div id="pagInicial">
         <header>
             <h1>IDENTIFICA LOS ANIMALES</h1>
             <div id="barraImagenes">
-
             </div>
             <hr>
             <div id="barraCirculos"> </div>
@@ -28,8 +26,8 @@
             <button class="tipoSelect" id="verElegirNivel"><a href="#test">REALIZAR TEST</a></button>
             <hr>
         </header>
-        <div id="zonatest">
-            <div id="prueba"></div>
+        <div id="zonatest" calss="numeracion">
+            
             <div id="niveles">
 
                 <button class="tipoSelect" id="facil" data-df='0'><a href="#test">PRINCIPIANTE</a></button>
@@ -38,6 +36,7 @@
             </div>
             <div id="content">
             </div>
+            <h2 id ="totalAciertos"></h2>
         </div>
         <div id="zonaresultados">
             <button class="tipoSelect" id="cargarResultados">CARGAR RESULTADOS</button>
@@ -46,7 +45,9 @@
                 <tr id="listaAnimales" ng-repeat="data in lista">
 
                     <td class="ver"> <img src="{{data.imgAnimal}}"></td>
-                    <td class="ver"> {{data.}}</td>
+                    <td class="ver" ng-if="data.correcto=='0'"> {{data.R1}}</td>
+                    <td class="ver" ng-if="data.correcto=='1'"> {{data.R2}}</td>
+                    <td class="ver" ng-if="data.correcto=='2'"> {{data.R3}}</td>
                 </tr>
             </table>
         </div>
@@ -55,4 +56,4 @@
 
 </body>
 
-</html ng-app="hola_angular">
+</html>
