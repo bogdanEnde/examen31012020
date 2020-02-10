@@ -114,7 +114,7 @@ function comprobarRespuesta(param) {
 
     $(function () {
         if (param.data.contadorRespuestasTotales >= param.data.countNumeracioPreg) {
-            param.data.bloqueAciertos += 'Has acertado ' + param.data.countAcierto + ' de ' + param.data.countNumeracio;
+            param.data.bloqueAciertos += 'Has acertado ' + param.data.countAcierto + ' de ' + param.data.countNumeracioPreg;
             $("#totalAciertos").html(param.data.countNumeracioPreg);
             $('#totalAciertos').show();
         }
