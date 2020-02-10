@@ -19,6 +19,12 @@ header{
     text-align: center;
     justify-content:center; 
 }
+#barraCirculos p{
+
+    text-align: center;
+    justify-content:center; 
+}
+
 #barraCirculos div{
     font-size: xx-large;
     border:2px solid black; 
@@ -29,14 +35,6 @@ header{
     height: 40px;
     margin:4px;
 }
-/* #zonatest div {}
-#prueba{
-    width: 50%;
-    display: ;
-   display: flex;
-   justify-content:space-evenly;
-} */
-
 #niveles{padding:20px;width:70%;margin:auto; }
 #niveles button{padding:8px}
 
@@ -73,11 +71,22 @@ header{
 a{   text-decoration: none;
      text-align: center;
 }
+
+.botonesRespuestasDiv{
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+}
+.botonesRespuestasDiv button{
+    padding: 10px 0px;
+    margin: 5px 20%;
+}
+
 .zonaCentro{text-align:center;margin-bottom: 90px;}
 .zonaCentro img{width: 60%; height:50%; }
 #content{  font-size: x-large;}
 #content img{width:40%; height: 40%;}
-.numeracion{text-align: left;
+.numeracion{
             width: 60%;
             margin: auto;
 }
@@ -144,3 +153,7 @@ table{
  width:20%;
     height:20%;
  }
+ .mal {
+    opacity: 0.5;
+    pointer-events:none;
+}
